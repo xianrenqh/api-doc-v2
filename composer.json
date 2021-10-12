@@ -1,0 +1,28 @@
+{
+  "name": "xianrenqh/api-doc-v2",
+  "description": "php API文档自动生成",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "xiaohuihui",
+      "email": "762229008@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "xianrenqh\\apidoc_v2\\": "src"
+    }
+  },
+  "extra": {
+    "think": {
+      "config": {
+        "apidoc_v2": "src/config/apidoc.php"
+      }
+    }
+  },
+  "minimum-stability": "beta"
+}
