@@ -1,6 +1,6 @@
 <?php
 
-namespace xianrenqh\apidoc_v2\lib;
+namespace xianrenqh\apidoc_v2;
 
 use xianrenqh\apidoc_v2\lib\Parser;
 use think\facade\Request;
@@ -39,7 +39,7 @@ class ApiDoc
      */
     public function getConfig()
     {
-        $config       = config('apidoc') ? config('apidoc') : config('apidoc.');
+        $config       = config('apidoc_v2') ? config('apidoc_v2') : config('apidoc_v2.');
         $this->config = array_merge($this->config, $config);
         if ( ! empty($this->config['auth'])) {
             $this->config['auth'] = [
@@ -58,7 +58,7 @@ class ApiDoc
      */
     public function getList()
     {
-        $config       = config('apidoc') ? config('apidoc') : config('apidoc.');
+        $config       = config('apidoc_v2') ? config('apidoc_v2') : config('apidoc_v2.');
         $this->config = array_merge($this->config, $config);
         // 验证token身份
         if ($this->config['auth']['with_auth'] === true) {
@@ -75,7 +75,7 @@ class ApiDoc
         $cacheName  = "";
         if ($this->config['with_cache']) {
             // 获取缓存数据
-            $cachePath = "../runtime/apidoc/".$version;
+            $cachePath = "../runtime/apidoc_v2/".$version;
             if (file_exists($cachePath) && $params['reload'] == 'false') {
                 $cacheFilePath = "";
                 $filePaths     = glob($cachePath.'/*.json');
@@ -148,7 +148,7 @@ class ApiDoc
      */
     public function verifyAuth()
     {
-        $config       = config('apidoc') ? config('apidoc') : config('apidoc.');
+        $config       = config('apidoc_v2') ? config('apidoc_v2') : config('apidoc_v2.');
         $this->config = array_merge($this->config, $config);
         $request      = Request::instance();
         $params       = $request->param();
@@ -171,7 +171,7 @@ class ApiDoc
      */
     public function getApiList($version)
     {
-        $config       = config('apidoc') ? config('apidoc') : config('apidoc.');
+        $config       = config('apidoc_v2') ? config('apidoc_v2') : config('apidoc_v2.');
         $this->config = array_merge($this->config, $config);
         $list         = [];
         $controllers  = $this->config['controllers'];
@@ -264,7 +264,7 @@ class ApiDoc
         $fileName    = date("Y-m-d H_i_s");
         $fileJson    = $json;
         $fileContent = json_encode($fileJson);
-        $dir         = "../runtime/apidoc/".$version;
+        $dir         = "../runtime/apidoc_v2/".$version;
         $path        = $dir."/".$fileName.".json";
         //判断文件夹是否存在
         if ( ! file_exists($dir)) {

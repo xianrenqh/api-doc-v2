@@ -21,6 +21,12 @@
     "think": {
       "config": {
         "apidoc_v2": "src/config/apidoc.php"
+      },
+      "app": {
+        "apidoc": "demo/apidoc"
+      },
+      "public": {
+        "static": "demo/static"
       }
     }
   },
