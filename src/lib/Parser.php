@@ -487,7 +487,7 @@ class Parser
     {
         $modelClassArr   = explode("\\", $path);
         $modelActionName = $modelClassArr[count($modelClassArr) - 1];
-        $definitionsPath = ! empty($this->config['definitions']) ? $this->config['definitions'] : "hg\apidoc\Definitions";
+        $definitionsPath = ! empty($this->config['definitions']) ? $this->config['definitions'] : "xianrenqh\apidoc_v2\lib\Definitions";
         $classReflect    = new \ReflectionClass($definitionsPath);
         $modelActionName = trim($modelActionName);
         $methodAction    = $classReflect->getMethod($modelActionName);

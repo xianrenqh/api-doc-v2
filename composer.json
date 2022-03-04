@@ -20,7 +20,7 @@
   "extra": {
     "think": {
       "config": {
-        "apidoc_v2": "src/config/apidoc.php"
+        "apidoc_v2": "src/config/apidoc_v2.php"
       }
     }
   },

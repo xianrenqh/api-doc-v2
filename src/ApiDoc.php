@@ -207,13 +207,20 @@ class ApiDoc
                             $action_doc = $actionDoc->parseAction($actionDocStr);
                             //$action_doc['name'] = $class."::".$action->name;
                             $action_doc['id']     = $k."-".$j;
-                            $action_doc['author'] = str_replace(" ", "", $action_doc['author']);
-                            $action_doc['desc']   = str_replace(" ", "", $action_doc['desc']);
-                            $action_doc['method'] = str_replace(" ", "", $action_doc['method']);
-                            $action_doc['title']  = str_replace(" ", "", $action_doc['title']);
-                            $action_doc['url']    = str_replace(" ", "", $action_doc['url']);
-                            $action_doc['tag']    = str_replace(" ", "", $action_doc['tag']);
-                            $action_doc['tag']    = str_replace("|", " ", $action_doc['tag']);
+                            $action_doc['author'] = ! empty($action_doc['author']) ? str_replace(" ", "",
+                                $action_doc['author']) : '';
+                            $action_doc['desc']   = ! empty($action_doc['desc']) ? str_replace(" ", "",
+                                $action_doc['desc']) : '';
+                            $action_doc['method'] = ! empty($action_doc['method']) ? str_replace(" ", "",
+                                $action_doc['method']) : '';
+                            $action_doc['title']  = ! empty($action_doc['title']) ? str_replace(" ", "",
+                                $action_doc['title']) : '';
+                            $action_doc['url']    = ! empty($action_doc['url']) ? str_replace(" ", "",
+                                $action_doc['url']) : '';
+                            $action_doc['tag']    = ! empty($action_doc['tag']) ? str_replace(" ", "",
+                                $action_doc['tag']) : '';
+                            $action_doc['tag']    = ! empty($action_doc['tag']) ? str_replace("|", " ",
+                                $action_doc['tag']) : '';
                             // 解析方法
                             $actions[] = $action_doc;
                         }

@@ -9,13 +9,13 @@ return [
         'api\\controller\\IndexController',
     ],
     // 指定公共注释定义的文件地址
-    'definitions'     => "app\apidoc\library\Definitions",
+    'definitions'     => "xianrenqh\apidoc_v2\lib\Definitions",
     // 设置可选版本
     'versions'        => [
         ['title' => 'V2.0', 'folder' => ''],
     ],
     //作者
-    'author'          => '灰灰',
+    'author'          => '小灰灰',
     // 控制器分组列表
     'groups'          => [],
     // 是否开启缓存
@@ -32,7 +32,7 @@ return [
     // 密码验证配置
     'auth'            => [
         // 是否启用密码验证
-        'with_auth'     => true,
+        'with_auth'     => false,
         // 验证密码
         'auth_password' => "123456",
         // 验证请求头中apidocToken的字段，默认即可
