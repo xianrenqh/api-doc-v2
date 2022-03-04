@@ -1,25 +1,25 @@
 # Api-Doc-v2
 
-###描述：
+### 描述：
 thinkphp6 API文档自动生成。
 >如果是thinkphp5，请自行更改下面第三部中apidoc文件夹里的控制器namespace
 
-###主要功能：
+### 主要功能：
 根据接口注释自动生成接口文档
 
-###版本更新：
+### 版本更新：
 
-###开源地址：
+### 开源地址：
 https://github.com/xianrenqh/api-doc-v2
 
-###扩展安装：
+### 扩展安装：
 方法一：composer命令
 ~~~
 composer require xianrenqh/api-doc-php
 ~~~
 
 
-###使用说明：
+### 使用说明：
 1、
 安装成功之后确认config文件夹下是否创建了 apidoc_v2.php文件，如果没有创建，请复制以下文件到config文件夹下
 \vendor\xianrenqh\api-doc-v2\src\config\apidoc_v2.php
@@ -80,7 +80,7 @@ return [
 ];
 
 ```
-####参数修改说明：
+#### 参数修改说明：
 controllers数组中的值是你需要显示的接口api的控制器，例如：
 ~~~
 'controllers'     => [
@@ -103,7 +103,7 @@ controllers数组中的值是你需要显示的接口api的控制器，例如：
 4、以上完成后，访问网址：
 http://你的域名/apidoc
 
-###在接口控制器中使用：
+### 在接口控制器中使用：
 新建一接口控制器，例如：\app\api\controller\UserController.php
 代码：
 ```php
